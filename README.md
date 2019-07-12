@@ -57,4 +57,4 @@ Contestant 1, "helltrain", has won !
 Визуализация с флагом -vis 18 с 4-мя одинаковыми чампионами helltrain.cor (копируют свой вспомогательный код, который пытается перезаписать все игровое поле):
 ![Alt text](images/image2.png?raw=true "First example") 
 Визуализация с флагом -vis 18 с 2-мя одинаковыми чампионами helltrain.cor  и  zork.cor (был стерт в начале):
-![Alt text](images/image1.png?raw=true "First example") 
+![Alt text](images/image1.png?raw=true "Second example") 
