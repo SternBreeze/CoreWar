@@ -19,13 +19,13 @@ Usage: ./asm <sourcefile.s>
  - corewar для осуществления самой игры. 
  
  
-В папке standard лежат эталонные программы standart/asm и standart/corewar, а также примеры чемпионов (многие невалидные). 
+В папке standard лежат эталонные программы standart/asm и standart/corewar, а также примеры чемпионов (standart/champs/examples точно валидные). 
 
 Usage:
 
 ```
 il-g1% ./corewar 
-Usage:
+Usage: ./corewar <champions.cor>
 	-a	: Prints output from "aff" (Default is to hide it)
 #### TEXT OUTPUT MODE ##################################################
 	-d N	: Dumps memory (x64 mode) after N cycles then exits
@@ -42,3 +42,19 @@ Usage:
 ```
 
 Пример:
+```
+il-g1% ./asm zork.s
+Writing output program to zork.cor
+il-g1% ./asm helltrain.s
+Writing output program to helltrain.cor
+il-g1% ./corewar  helltrain.cor zork.cor helltrain.cor 
+Introducing contestants...
+* Player 1, weighing 617 bytes, "helltrain" ("choo-choo, motherf*****s !") !
+* Player 2, weighing 23 bytes, "zork" ("I'M ALIIIIVE") !
+* Player 3, weighing 617 bytes, "helltrain" ("choo-choo, motherf*****s !") !
+Contestant 1, "helltrain", has won !
+```
+Визуализация с флагом -vis 18 с 4-мя одинаковыми чампионами helltrain.cor (копируют свой вспомогательный код, который пытается перезаписать все игровое поле):
+![Alt text](images/image2.png?raw=true "First example") 
+Визуализация с флагом -vis 18 с 2-мя одинаковыми чампионами helltrain.cor  и  zork.cor (был стерт в начале):
+![Alt text](images/image1.png?raw=true "First example") 
